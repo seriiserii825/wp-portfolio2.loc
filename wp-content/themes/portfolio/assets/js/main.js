@@ -43,10 +43,11 @@
                 var textData = getSentences(typerText);
 
                 function getSentences(text){
-
+                	var arr = text.split('. ');	
+                	return arr;
                 }
-                
-            	/*foo.typer(['Привет меня зовут Сергей.', 'Я занимаюсь уже два года версткой сайтов.', 'Натяжкой на wordpress.', 'И другими интересными вещами.']);*/
+
+            	foo.typer(textData);
       		});
 		});
 

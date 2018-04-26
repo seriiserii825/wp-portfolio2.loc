@@ -64,8 +64,17 @@
                 </div>
                 <p class="hi">
                     <!-- <span class="dropcap">Hi</span> -->
+                    <?php $running_line = new WP_Query('cat => 2'); ?>
                     <span class="detail typer-detail" id="js-detail">
-                        Привет меня зовут Сергей. Я занимаюсь уже два года версткой сайтов. Натяжкой на wordpress. И другими интересными вещами.
+
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                            <?php the_field('running_line'); ?>
+                          <?php endwhile; ?>
+                          <!-- post navigation -->
+                          <?php else: ?>
+                          <!-- no posts found -->
+                        <?php endif; ?>
+                        
                     </span>
                 </p>
                 <div class="button">
@@ -91,46 +100,40 @@
             <!-- begin #resume -->
             <div id="resume" class="absolute">
                 <div id="top-resume" class="expand add-expand">
-                    <h1>Resume</h1>
-                    <div class="detail">View My Resume</div>
+                    <h1>Мой опыт</h1>
+                    <div class="detail">Посмотрите мой опыт работы</div>
                     <div class="icon icon-left fa fa-file-o"></div>
                 </div>
                 <div class="main-content">
                     <a href="#top-resume" class="close-icon expand"></a>
-                    <h1 class="title">My Resume</h1>
+                    <h1 class="title">Мое резюме</h1>
                     <div class="row">
                         <div class="col-md-6">
-                            <h2 class="title">Work Experience</h2>
+                            <h2 class="title">Опыт работы</h2>
                             <!-- begin #timeline -->
-                            <div id="timeline">
-                                <div class="timeline-item">
-                                    <div class="briefcase fa fa-briefcase"></div>
-                                    <div class="job">
-                                        <h2 class="job-title">Envato <span>- Web Engineer</span></h2>
-                                        <h3 class="year">2008 - 2010</h3>
-                                        <div class="job-detail">I was dealing with some lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut.</div>
+
+                            <?php $work_exp = new WP_Query([
+                                    'cat' => 3,
+                                    'posts_per_page' => -1
+                                ]); ?>
+
+                            <?php if ( $work_exp->have_posts() ) : while ( $work_exp->have_posts() ) : $work_exp->the_post(); ?>
+                                    <div id="timeline">
+                                        <div class="timeline-item">
+                                            <div class="briefcase fa fa-briefcase"></div>
+                                            <div class="job">
+                                                <h2 class="job-title"><?php the_title(); ?> <span>- <?php the_field('profession'); ?></span></h2>
+                                                <h3 class="year"><?php the_field('year'); ?></h3>
+                                                <div class="job-detail"><?php the_content(); ?></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="briefcase fa fa-briefcase"></div>
-                                    <div class="job">
-                                        <h2 class="job-title">Themeforest <span>- Author</span></h2>
-                                        <h3 class="year">2011 - 2012</h3>
-                                        <div class="job-detail">I was dealing with some lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut.</div>
-                                    </div>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="briefcase fa fa-briefcase"></div>
-                                    <div class="job">
-                                        <h2 class="job-title">Tutsplus <span>- Editor</span></h2>
-                                        <h3 class="year">2012 - Present</h3>
-                                        <div class="job-detail">I was dealing with some lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut.</div>
-                                    </div>
-                                </div>
-                            </div>
+                                  <?php endwhile; ?>
+                                  <!-- post navigation -->
+                                  <?php else: ?>
+                                  <!-- no posts found -->
+                                <?php endif; ?>    
+                            
                             <!-- end #timeline -->
                         </div>
                         <div class="col-md-5">
@@ -139,13 +142,13 @@
                                 <h2 class="title">My skills</h2>
                                 <div class="skill-item">
                                     <h3 class="skill-title">HTML / CSS</h3>
-                                    <div class="skill-bar-bg" data-percent="80">
+                                    <div class="skill-bar-bg" data-percent="100">
                                         <div class="skill-bar"></div>
                                     </div>
                                 </div>
                                 <div class="skill-item">
                                     <h3 class="skill-title">jQuery</h3>
-                                    <div class="skill-bar-bg" data-percent="70">
+                                    <div class="skill-bar-bg" data-percent="90">
                                         <div class="skill-bar"></div>
                                     </div>
                                 </div>
@@ -160,38 +163,36 @@
 
                             <!-- begin #testimonials -->
                             <div id="testimonials">
-                                <h2 class="title">What They Say</h2>
+                                <h2 class="title">Отзывы заказчиков:</h2>
                                 <div id="carousel-container" class="owl-carousel owl-theme">
-                                    <div class="item testi-item">
-                                        <div class="testi-profile">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/testimonials/1.jpg" alt="testimonial profile">
-                                            <div class="detail">
-                                                <h3>Minami Nyan</h3>
-                                                <h4>Google Inc.</h4>
-                                            </div>
+
+                                    <?php $reviews = new WP_Query([
+                                            'post_type' => 'my_reviews',
+                                            'posts_per_page' => -1
+                                        ]); ?>
+
+                                    <?php if ( $reviews->have_posts() ) : while ( $reviews->have_posts() ) : $reviews->the_post(); ?>
+                                        <div class="item testi-item">
+                                            <a href="<?php the_field('link'); ?>" target="_blank">
+                                                <div class="testi-profile">
+                                                    <div class="img-wrap">
+                                                        <?php the_post_thumbnail(); ?>      
+                                                    </div>
+                                                    <div class="detail">
+                                                        <h3><?php the_title(); ?></h3>
+                                                        <h4><?php the_field('nick'); ?></h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <div class="words"><?php the_content(); ?></div>
                                         </div>
-                                        <div class="words">Katya is a great partner to lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>
-                                    </div>
-                                    <div class="item testi-item">
-                                        <div class="testi-profile">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/testimonials/2.jpg" alt="testimonial profile">
-                                            <div class="detail">
-                                                <h3>Liraley Keltskaya</h3>
-                                                <h4>Microsoft Inc.</h4>
-                                            </div>
-                                        </div>
-                                        <div class="words">Katya is a great partner to lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>
-                                    </div>
-                                    <div class="item testi-item">
-                                        <div class="testi-profile">
-                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/testimonials/3.jpg" alt="testimonial profile">
-                                            <div class="detail">
-                                                <h3>Mad Minami</h3>
-                                                <h4>Facebook Inc.</h4>
-                                            </div>
-                                        </div>
-                                        <div class="words">Katya is a great partner to lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</div>
-                                    </div>
+                                      <?php endwhile; ?>
+                                      <!-- post navigation -->
+                                      <?php else: ?>
+                                      <!-- no posts found -->
+                                    <?php endif; ?>
+
                                 </div>
                             </div>
                             <!-- end #testimonials -->
@@ -204,8 +205,8 @@
             <!-- begin #portfolio -->
             <div id="portfolio" class="absolute">
                 <div id="top-portfolio" class="expand add-expand">
-                    <h1>Portfolio</h1>
-                    <div class="detail">Watch My Works</div>
+                    <h1>Портфолио</h1>
+                    <div class="detail">Посмотрите мои работы</div>
                     <div class="icon icon-left fa fa-briefcase"></div>
                 </div>
                 <div class="main-content">

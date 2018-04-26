@@ -489,6 +489,21 @@ body {
     margin-bottom: 25px;
 }
 
+.testi-item .img-wrap {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testi-item img {
+    max-width: 100%;
+    height: auto;
+}
+
 .testi-profile {
     height: 50px;
 }
@@ -500,6 +515,8 @@ body {
 }
 
 .testi-profile .detail {
+    display: inline-block;
+    vertical-align: middle;
     height: inherit;
     padding-left: 65px;
 }

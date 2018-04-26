@@ -78,25 +78,28 @@ function portfolio_scripts() {
 add_action( 'after_setup_theme', 'portfolio_setup' );
 function portfolio_setup() {
     add_theme_support( 'custom-logo' );
+    add_theme_support('post-thumbnails');
 }
+
+
 
 add_action('init', 'register_post_types');
 function register_post_types(){
-    register_post_type('post_type_name', array(
+    register_post_type('my_reviews', array(
         'label'  => null,
         'labels' => array(
-            'name'               => '____', // основное название для типа записи
-            'singular_name'      => '____', // название для одной записи этого типа
-            'add_new'            => 'Добавить ____', // для добавления новой записи
-            'add_new_item'       => 'Добавление ____', // заголовка у вновь создаваемой записи в админ-панели.
-            'edit_item'          => 'Редактирование ____', // для редактирования типа записи
-            'new_item'           => 'Новое ____', // текст новой записи
-            'view_item'          => 'Смотреть ____', // для просмотра записи этого типа.
-            'search_items'       => 'Искать ____', // для поиска по этим типам записи
+            'name'               => 'Отзывы', // основное название для типа записи
+            'singular_name'      => 'Отзыв', // название для одной записи этого типа
+            'add_new'            => 'Добавить Отзыв', // для добавления новой записи
+            'add_new_item'       => 'Добавление Отзыва', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item'          => 'Редактирование Отзыв', // для редактирования типа записи
+            'new_item'           => 'Новый Отзывы', // текст новой записи
+            'view_item'          => 'Смотреть Отзыв', // для просмотра записи этого типа.
+            'search_items'       => 'Искать Отзыв', // для поиска по этим типам записи
             'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
             'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
             'parent_item_colon'  => '', // для родителей (у древовидных типов)
-            'menu_name'          => '____', // название меню
+            'menu_name'          => 'Отзывы', // название меню
         ),
         'description'         => '',
         'public'              => true,
@@ -110,11 +113,8 @@ function register_post_types(){
         'rest_base'           => null, // $post_type. C WP 4.7
         'menu_position'       => null,
         'menu_icon'           => null, 
-        //'capability_type'   => 'post',
-        //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
-        //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
         'hierarchical'        => false,
-        'supports'            => array('title','editor')
+        'supports'            => array('title','editor', 'thumbnail')
     ) );
 }
 
