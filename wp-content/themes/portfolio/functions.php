@@ -68,4 +68,12 @@ function portfolio_scripts() {
     /*wp_enqueue_script( 'portfolio-gmap', get_template_directory_uri() .'/assets/js/gmap.js', ['portfolio-jquery'], null, true );*/
     /*wp_enqueue_script( 'portfolio-google-map', 'http://maps.google.com/maps/api/js?sensor=true/false', [], null, true );*/
     wp_enqueue_script( 'portfolio-main', get_template_directory_uri() .'/assets/js/main.js', ['portfolio-jquery'], null, true );
+
+
+}
+
+add_action( 'after_setup_theme', 'portfolio_setup' );
+
+function portfolio_setup() {
+    add_theme_support( 'custom-logo' );
 }

@@ -41,10 +41,12 @@
                     <a href="#top-profile" class="close-icon expand-profile"></a>
                 </div>
                 <div class="summary">
-                    <img class="big-image" src="<?php bloginfo('template_url'); ?>/assets/img/profile-picture.jpg" alt="Profile Picture">
-                    <a href="index-2.html">
-                        <img class="logo" src="<?php bloginfo('template_url'); ?>/assets/img/katya-logo.png" alt="Katya Logo">
-                    </a>
+
+                    <!-- logo -->
+                    <div class="logo-wrap">
+                        <?php the_custom_logo(); ?>
+                    </div>
+
                     <div class="occupation">Front-End Developer, Web Designer, Illustrator</div>
                 </div>
                 <p class="hi">

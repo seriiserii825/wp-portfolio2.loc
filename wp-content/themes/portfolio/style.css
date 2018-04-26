@@ -143,12 +143,26 @@ body {
     border-radius: 50%;
 }
 
-.logo {
+.logo-wrap {
+    display: table;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo-wrap img {
+    width: 100%;
+    height: auto;
+}
+
+/* .logo {
     width: 100px;
     display: block;
     margin: 0 auto 10px;
     opacity: .85;
-}
+} */
 
 .occupation {
     text-align: center;
