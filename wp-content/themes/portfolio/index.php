@@ -47,13 +47,27 @@
                         <?php the_custom_logo(); ?>
                     </div>
 
-                    <div class="occupation">Front-End Developer, Web Designer, Illustrator</div>
+                    <div class="occupation">
+                        <?php $profile = new WP_Query([
+                                'post_type' => 'post',
+                                'cat' => 2
+                        ]); ?>
+                        
+                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                          <?php the_field('profil'); ?>
+                          <?php endwhile; ?>
+                          <?php else: ?>
+                          <!-- no posts found -->
+                        <?php endif; ?>
+
+                    </div>
                 </div>
                 <p class="hi">
-                    <span class="dropcap">Hi</span><span class="detail"></span>
+                    <!-- <span class="dropcap">Hi</span> -->
+                    <span class="detail"></span>
                 </p>
                 <div class="button">
-                    <a href="#" class="download">Download CV &nbsp;
+                    <a href="http://wp-portfolio2.loc/wp-content/uploads/2018/04/burduja_serghei.odt" class="download">Download CV &nbsp;
                         <span class="fa fa-download"></span>
                     </a>
                 </div>

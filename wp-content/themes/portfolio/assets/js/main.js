@@ -34,7 +34,7 @@
       			$(".preloader-right").addClass("slide-right");
       			//	Typerjs function - Edit the sentences below
 				$('.hi .detail')
-					.typeTo("I'm Katya. Front-end developer based on Saint Petersburg, Russia. While not coding, i love to play guitar and read comic books.");
+					.typeTo("Меня зовут сергей, я занимаюсь уже два года версткой сайтов, натяжкой на wordpress и другими интересными вещами.");
       		});
 		});
 
