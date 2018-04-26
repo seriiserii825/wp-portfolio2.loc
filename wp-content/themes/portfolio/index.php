@@ -64,7 +64,9 @@
                 </div>
                 <p class="hi">
                     <!-- <span class="dropcap">Hi</span> -->
-                    <span class="detail"></span>
+                    <span class="detail typer-detail" id="js-detail">
+                        Привет меня зовут Сергей. Я занимаюсь уже два года версткой сайтов. Натяжкой на wordpress. И другими интересными вещами.
+                    </span>
                 </p>
                 <div class="button">
                     <a href="http://wp-portfolio2.loc/wp-content/uploads/2018/04/burduja_serghei.odt" class="download">Download CV &nbsp;

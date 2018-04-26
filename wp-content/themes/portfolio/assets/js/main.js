@@ -32,9 +32,21 @@
       			$("#resume, #blog, #portfolio, #contact").removeClass("absolute");
       			$(".preloader-left").addClass("slide-left");
       			$(".preloader-right").addClass("slide-right");
+
       			//	Typerjs function - Edit the sentences below
-				$('.hi .detail')
-					.typeTo("Меня зовут сергей, я занимаюсь уже два года версткой сайтов, натяжкой на wordpress и другими интересными вещами.");
+      			//	https://www.jqueryscript.net/text/Animated-Typewriter-Effect-with-jQuery-typer-js.html
+				var typerText = $('#js-detail').text();
+
+				var win = $(window),
+                foo = $('#js-detail');
+
+                var textData = getSentences(typerText);
+
+                function getSentences(text){
+
+                }
+                
+            	/*foo.typer(['Привет меня зовут Сергей.', 'Я занимаюсь уже два года версткой сайтов.', 'Натяжкой на wordpress.', 'И другими интересными вещами.']);*/
       		});
 		});
 
