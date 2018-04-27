@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head <?php language_attributes(); ?>>
+<head <?php language_attributes(); ?> >
 
     <title><?php wp_get_document_title(); ?></title>
     <meta charset="utf-8">
@@ -8,14 +8,14 @@
     <meta name="author" content="balapa">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google Font link -->
+  <!-- Google Font link -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-
-<?php wp_head(); ?>
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
+	
+	<?php wp_head(); ?>
 
 </head>
 <body <?php body_class(); ?>>
@@ -34,7 +34,7 @@
         <div id="profile" class="profile">
             <div id="top-profile" class="expand add-expand">
                 <h1>Profile</h1>
-                <img class="small-image icon icon-left fa" src="<?php bloginfo('template_url'); ?>/assets/img/profile-picture.jpg" alt="Mobile Profile Picture">
+                <img class="small-image icon icon-left fa" src="<?php bloginfo( 'template_url' ); ?>/assets/img/profile-picture.jpg" alt="Mobile Profile Picture">
             </div>
             <div class="main-content-profile">
                 <div class="close-icon-container">
@@ -48,30 +48,30 @@
                     </div>
 
                     <div class="occupation">
-                        <?php $profile = new WP_Query([
-                                'post_type' => 'post',
-                                'cat' => 2
-                        ]); ?>
-                        
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                          <?php the_field('profil'); ?>
-                          <?php endwhile; ?>
-                          <?php else: ?>
+                        <?php $profile = new WP_Query( [
+	                        'post_type' => 'post',
+	                        'cat'       => 2,
+                        ] ); ?>
+	
+	                    <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+		                    <?php the_field( 'profil' ); ?>
+	                    <?php endwhile; ?>
+	                    <?php else: ?>
                           <!-- no posts found -->
-                        <?php endif; ?>
+	                    <?php endif; ?>
 
                     </div>
                 </div>
                 <p class="hi">
                     <!-- <span class="dropcap">Hi</span> -->
-                    <?php $running_line = new WP_Query('cat => 2'); ?>
-                    <span class="detail typer-detail" id="js-detail">
+	                <?php $running_line = new WP_Query( 'cat => 2' ); ?>
+                  <span class="detail typer-detail" id="js-detail">
 
-                        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                            <?php the_field('running_line'); ?>
-                          <?php endwhile; ?>
+                        <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+	                        <?php the_field( 'running_line' ); ?>
+                        <?php endwhile; ?>
                           <!-- post navigation -->
-                          <?php else: ?>
+                        <?php else: ?>
                           <!-- no posts found -->
                         <?php endif; ?>
                         
@@ -92,9 +92,9 @@
                 </div>
             </div>
         </div>
-        <!-- end #profile -->
+      <!-- end #profile -->
 
-        <!-- begin #features -->
+      <!-- begin #features -->
         <div id="features">
 
             <!-- begin #resume -->
@@ -110,31 +110,32 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h2 class="title">Опыт работы</h2>
-                            <!-- begin #timeline -->
-
-                            <?php $work_exp = new WP_Query([
-                                    'cat' => 3,
-                                    'posts_per_page' => -1
-                                ]); ?>
-
-                            <?php if ( $work_exp->have_posts() ) : while ( $work_exp->have_posts() ) : $work_exp->the_post(); ?>
-                                    <div id="timeline">
+                          <!-- begin #timeline -->
+	
+	                        <?php $work_exp = new WP_Query( [
+		                        'cat'            => 3,
+		                        'posts_per_page' => - 1,
+	                        ] ); ?>
+	
+	                        <?php if ( $work_exp->have_posts() ) : while( $work_exp->have_posts() ) : $work_exp->the_post(); ?>
+                              <div id="timeline">
                                         <div class="timeline-item">
                                             <div class="briefcase fa fa-briefcase"></div>
                                             <div class="job">
-                                                <h2 class="job-title"><?php the_title(); ?> <span>- <?php the_field('profession'); ?></span></h2>
-                                                <h3 class="year"><?php the_field('year'); ?></h3>
+                                                <h2 class="job-title"><?php the_title(); ?>
+                                                  <span>- <?php the_field( 'profession' ); ?></span></h2>
+                                                <h3 class="year"><?php the_field( 'year' ); ?></h3>
                                                 <div class="job-detail"><?php the_content(); ?></div>
                                             </div>
                                         </div>
                                     </div>
-                                  <?php endwhile; ?>
-                                  <!-- post navigation -->
-                                  <?php else: ?>
-                                  <!-- no posts found -->
-                                <?php endif; ?>    
-                            
-                            <!-- end #timeline -->
+	                        <?php endwhile; ?>
+                              <!-- post navigation -->
+	                        <?php else: ?>
+                              <!-- no posts found -->
+	                        <?php endif; ?>
+
+                          <!-- end #timeline -->
                         </div>
                         <div class="col-md-5">
                             <!-- begin #skills -->
@@ -159,50 +160,50 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end #skills -->
+                          <!-- end #skills -->
 
-                            <!-- begin #testimonials -->
+                          <!-- begin #testimonials -->
                             <div id="testimonials">
                                 <h2 class="title">Отзывы заказчиков:</h2>
                                 <div id="carousel-container" class="owl-carousel owl-theme">
 
-                                    <?php $reviews = new WP_Query([
-                                            'post_type' => 'my_reviews',
-                                            'posts_per_page' => -1
-                                        ]); ?>
-
-                                    <?php if ( $reviews->have_posts() ) : while ( $reviews->have_posts() ) : $reviews->the_post(); ?>
-                                        <div class="item testi-item">
-                                            <a href="<?php the_field('link'); ?>" target="_blank">
+                                    <?php $reviews = new WP_Query( [
+	                                    'post_type'      => 'my_reviews',
+	                                    'posts_per_page' => - 1,
+                                    ] ); ?>
+	
+	                                <?php if ( $reviews->have_posts() ) : while( $reviews->have_posts() ) : $reviews->the_post(); ?>
+                                      <div class="item testi-item">
+                                            <a href="<?php the_field( 'link' ); ?>" target="_blank">
                                                 <div class="testi-profile">
                                                     <div class="img-wrap">
-                                                        <?php the_post_thumbnail(); ?>      
+                                                        <?php the_post_thumbnail(); ?>
                                                     </div>
                                                     <div class="detail">
                                                         <h3><?php the_title(); ?></h3>
-                                                        <h4><?php the_field('nick'); ?></h4>
+                                                        <h4><?php the_field( 'nick' ); ?></h4>
                                                     </div>
                                                 </div>
                                             </a>
 
                                             <div class="words"><?php the_content(); ?></div>
                                         </div>
-                                      <?php endwhile; ?>
+	                                <?php endwhile; ?>
                                       <!-- post navigation -->
-                                      <?php else: ?>
+	                                <?php else: ?>
                                       <!-- no posts found -->
-                                    <?php endif; ?>
+	                                <?php endif; ?>
 
                                 </div>
                             </div>
-                            <!-- end #testimonials -->
+                          <!-- end #testimonials -->
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end #resume -->
+          <!-- end #resume -->
 
-            <!-- begin #portfolio -->
+          <!-- begin #portfolio -->
             <div id="portfolio" class="absolute">
                 <div id="top-portfolio" class="expand add-expand">
                     <h1>Портфолио</h1>
@@ -211,61 +212,58 @@
                 </div>
                 <div class="main-content">
                     <a href="#top-portfolio" class="close-icon expand"></a>
-                    <h1 class="title">My Portfolio</h1>
-                        <ul id="filter">
-                            <li><a class="active" href="#" data-group="all">All</a></li>
-                            <li><a href="#" data-group="print">Print</a></li>
-                            <li><a href="#" data-group="logo">Logo</a></li>
-                            <li><a href="#" data-group="sketch">Skecth</a></li>
-                        </ul>
 
-                        <div id="masonry-container">
+                    <h1 class="title">Мое портфолио</h1>
+	
+                  <ul id="filter">
+                    
+                    <?php $tags = show_tags();?>
+                   
+                  </ul>
 
-                            <div class="masonry-item" data-groups='["all", "sketch"]'>
-                                <a class="overlay" href="portfolio-case.html">
-                                    <h1>Badge</h1>
-                                    <h4>This is my project about lorem ipsum dolor.</h4>
-                                </a>
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/1.jpg" alt="item 1">
-                            </div>
+                  <div class="portfolio">
+                    <?php $portfolio_posts = new WP_Query( [
+	                    'post_type'      => 'portfolio',
+	                    'posts_per_page' => - 1,
+                    ] ); ?>
+	
+	                  <?php $i = 1; ?>
+	
+	                  <?php if ( $portfolio_posts->have_posts() ) : while( $portfolio_posts->have_posts() ) : $portfolio_posts->the_post(); ?>
+		
+		                  <?php if ( $i === 1 || $i % 3 === 0 ): ?>
+                          <div class="portfolio-item-wrap">
+		                  <?php endif ?>
 
-                            <div class="masonry-item" data-groups='["all", "sketch"]'>
-                                <a class="overlay" href="portfolio-case.html">
-                                    <h1>Sketch</h1>
-                                    <h4>This is my project about lorem ipsum dolor.</h4>
-                                </a>
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/2.jpg" alt="item 2">
-                            </div>
+                        <div class="portfolio-item">
+                              <a class="overlay" href="<?php the_field( 'link_to_project' ); ?>" target="_blank">
+                                  <span class="portfolio-content">
+                                      <h1><?php the_title(); ?></h1>
+                                      <h4><?php the_content(); ?></h4>
+                                  </span>
+                              </a>
+		                    <?php the_post_thumbnail( 'small' ); ?>
+                          </div>
+		
+		                  <?php if ( $i === 2 || $i % 2 === 0 ): ?>
+                          </div>
+		                  <?php endif ?>
+		
+		                  <?php ++ $i; ?>
+	
+	                  <?php endwhile; ?>
+                        <!-- post navigation -->
+	                  <?php else: ?>
+                        <!-- no posts found -->
+	                  <?php endif; ?>
 
-                            <div class="masonry-item" data-groups='["all", "print"]'>
-                                <a class="overlay" href="portfolio-case.html">
-                                    <h1>Breaking Bad</h1>
-                                    <h4>This is my project about lorem ipsum dolor.</h4>
-                                </a>
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/3.jpg" alt="item 3">
-                            </div>
-
-                            <div class="masonry-item" data-groups='["all", "logo"]'>
-                                <a class="overlay" href="portfolio-case.html">
-                                    <h1>Hopdog</h1>
-                                    <h4>This is my project about lorem ipsum dolor.</h4>
-                                </a>
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/4.png" alt="item 4">
-                            </div>
-
-                            <div class="masonry-item" data-groups='["all", "logo"]'>
-                                <a class="overlay" href="portfolio-case.html">
-                                    <h1>Playstation</h1>
-                                    <h4>This is my project about lorem ipsum dolor.</h4>
-                                </a>
-                                <img src="<?php bloginfo('template_url'); ?>/assets/img/portfolio/5.jpg" alt="item 5">
-                            </div>
-                        </div>
+                  </div>
+                  
                 </div>
             </div>
-            <!-- end #portfolio -->
+          <!-- end #portfolio -->
 
-            <!-- begin #blog -->
+          <!-- begin #blog -->
             <div id="blog" class="absolute">
                 <div id="top-blog" class="expand add-expand">
                     <h1>Blog</h1>
@@ -284,7 +282,7 @@
                                     <a class="overlay" href="blog-post.html">
                                         <h1>Read More</h1>
                                     </a>
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/1.jpg" alt="Blog thumbnail">
+                                    <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/blog/1.jpg" alt="Blog thumbnail">
                                     <div class="detail row">
                                         <div class="date">
                                             <span>18</span>
@@ -298,15 +296,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end #blog-item -->
+                          <!-- end #blog-item -->
 
-                            <!-- begin #blog-item -->
+                          <!-- begin #blog-item -->
                             <div class="col-md-5">
                                 <div class="blog-item">
                                     <a class="overlay" href="blog-post.html">
                                         <h1>Read More</h1>
                                     </a>
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/2.png" alt="Blog thumbnail">
+                                    <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/blog/2.png" alt="Blog thumbnail">
                                     <div class="detail row">
                                         <div class="date">
                                             <span>21</span>
@@ -320,15 +318,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end #blog-item -->
+                          <!-- end #blog-item -->
 
-                            <!-- begin #blog-item -->
+                          <!-- begin #blog-item -->
                             <div class="col-md-5">
                                 <div class="blog-item">
                                     <a class="overlay" href="blog-post.html">
                                         <h1>Read More</h1>
                                     </a>
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/3.png" alt="Blog thumbnail">
+                                    <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/blog/3.png" alt="Blog thumbnail">
                                     <div class="detail row">
                                         <div class="date">
                                             <span>19</span>
@@ -342,15 +340,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end #blog-item -->
+                          <!-- end #blog-item -->
 
-                            <!-- begin #blog-item -->
+                          <!-- begin #blog-item -->
                             <div class="col-md-5">
                                 <div class="blog-item">
                                     <a class="overlay" href="blog-post.html">
                                         <h1>Read More</h1>
                                     </a>
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/blog/4.jpg" alt="Blog thumbnail">
+                                    <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/blog/4.jpg" alt="Blog thumbnail">
                                     <div class="detail row">
                                         <div class="date">
                                             <span>25</span>
@@ -364,15 +362,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end #blog-item -->
+                          <!-- end #blog-item -->
 
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end #blog -->
+          <!-- end #blog -->
 
-            <!-- begin #contact -->
+          <!-- begin #contact -->
             <div id="contact" class="absolute">
                 <div id="top-contact" class="expand add-expand">
                     <h1>Contact</h1>
@@ -389,7 +387,7 @@
                                 <div id="google-container"></div>
                                 <div id="cd-zoom-in"></div>
                                 <div id="cd-zoom-out"></div>
-                                <address>St Petersburg, Russia</address> 
+                                <address>St Petersburg, Russia</address>
                             </section>
                             <ul class="list">
                                 <li><div class="icon fa fa-map-marker"></div>Saint Petersburg, Russia</li>
@@ -416,10 +414,10 @@
                     </div>
                 </div>
             </div>
-            <!-- end #contact -->
+          <!-- end #contact -->
 
         </div>
-        <!-- end #features -->
+      <!-- end #features -->
 
     </div>
     <!-- end #main-container -->

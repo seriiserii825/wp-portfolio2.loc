@@ -1544,3 +1544,59 @@ body {
     font-size: 20px;
     font-style: italic;
 }
+
+.portfolio {
+
+}
+
+.portfolio-item-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 880px;
+}
+
+.portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+    width: 49%;
+    border: 3px solid #d4d2d2;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,.6);
+    transition: .3s all ease;
+    z-index: 999;
+    opacity: 0;
+}
+
+.portfolio-content {
+    display: table;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
