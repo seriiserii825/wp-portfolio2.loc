@@ -1,13 +1,14 @@
 /*
-Theme Name: Portfolio
-Theme URI: http://wp-portfolio2.loc/
-Author: the WordPress team
-Author URI: http://wp-portfolio2.loc/
-Description: 
+Theme Name: Portfolio2
+Theme URI: http://wordpress.host1670806.hostland.pro/
+Author: serii
+Author URI: http://host1670806.hostland.pro/
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
 Version: 1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: portfolio
 */
 
 /*  ==========================================================
@@ -108,7 +109,7 @@ body {
 
 #main-container > div {
     transition: .3s all ease;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 /*  ----------------------------------------------------------
@@ -123,7 +124,7 @@ body {
 }
 
 #profile .expand {
-    display: none;      
+    display: none;
 }
 
 #profile .summary {
@@ -253,8 +254,8 @@ body {
     cursor: pointer;
     position: relative;
     box-sizing: border-box;
-    width: 25%;
-    will-change: width; 
+    width: 33%;
+    will-change: width;
 }
 
 #features .expand {
@@ -881,13 +882,17 @@ body {
     font-size: 16px;
 }
 
-#contact-form {
+.wpcf7-form{
     margin-bottom: 30px;
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea,
+.wpcf7-form span {
+    display: block;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea,
 #comment-form input[type="text"],
 #comment-form textarea {
     width: 100%;
@@ -900,22 +905,22 @@ body {
     font-family: 'Droid Serif', serif;
 }
 
-#contact-form textarea,
+.wpcf7-form textarea,
 #comment-form textarea {
     height: 120px;
     line-height: 1.5em;
 }
 
-#contact-form input[type="text"]:focus,
-#contact-form input[type="email"]:focus,
-#contact-form textarea:focus,
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form textarea:focus,
 #subscribe input[type="email"]:focus,
 #comment-form input[type="text"]:focus,
 #comment-form textarea:focus {
     outline: none;
 }
 
-#contact-form input[type="submit"],
+.wpcf7-form input[type="submit"],
 #comment-form input[type="submit"] {
     display: inline-block;
     height: 50px;
@@ -928,12 +933,12 @@ body {
     font-family: 'Montserrat', serif;
 }
 
-#contact-form input[type="submit"]:hover,
+.wpcf7-form input[type="submit"]:hover,
 #comment-form input[type="submit"]:hover {
     color: white;
 }
 
-#contact-form input[type="submit"]:focus,
+.wpcf7-form input[type="submit"]:focus,
 #comment-form input[type="submit"]:focus {
     outline: none;
 }
@@ -1224,13 +1229,13 @@ body {
 ::-webkit-scrollbar {
     width: 10px;
 }
- 
+
 ::-webkit-scrollbar-track {
     background: #eee;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,.2); 
+    background: rgba(0,0,0,.2);
 }
 
 /*  ----------------------------------------------------------
@@ -1424,7 +1429,7 @@ body {
         right: 25px;
         font-size: 40px;
         top: 50%;
-        margin-top: -20px;  
+        margin-top: -20px;
         display: inline-block;
     }
 
@@ -1508,7 +1513,7 @@ body {
     .masonry-item .overlay h4 {
         padding: 0 20px !important;
         font-size: 16px;
-    }   
+    }
 
     #features > div,
     #blog-post,
@@ -1545,23 +1550,23 @@ body {
     font-style: italic;
 }
 
-.portfolio {
-
-}
-
 .portfolio-item-wrap {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 880px;
 }
 
 .portfolio-item {
     position: relative;
     margin-bottom: 30px;
-    width: 49%;
+    width: 48%;
     border: 3px solid #d4d2d2;
     border-radius: 4px;
     transition: all .3s ease;
+}
+
+.portfolio-item:nth-child(odd) {
+    margin-right: 15px;
 }
 
 .portfolio-item .overlay {

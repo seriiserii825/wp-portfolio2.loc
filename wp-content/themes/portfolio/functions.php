@@ -153,7 +153,7 @@ function portfolio_post_types() {
 	) );
 }
 
-function show_tags() {
+/*function show_tags() {
 	$portfolio_posts = new WP_Query( [
 		'post_type'      => 'portfolio',
 		'posts_per_page' => - 1,
@@ -165,7 +165,5 @@ function show_tags() {
 		$tags[] = wp_get_post_tags($post->ID)[0];
 	}
 	
-	
 	return $tags;
-	
-}
+}*/
