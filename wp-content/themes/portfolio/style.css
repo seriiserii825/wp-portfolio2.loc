@@ -1553,8 +1553,9 @@ body {
 .portfolio-item-wrap {
     display: flex;
     flex-wrap: wrap;
-    max-width: 880px;
+    max-width: 882px;
 }
+
 
 .portfolio-item {
     position: relative;
