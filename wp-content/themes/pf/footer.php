@@ -1,36 +1,36 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package pf
- */
-
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pf' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pf' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pf' ), 'pf', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="t-center">
+	<div class="wrap-footer">
+		<div class="zerogrid">
+			<div class="row">
+				<span class="phone">PHONE: +1 800 559 6580</span>
+				<ul class="bottom-social">
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				</ul>
+				<ul class="quick-link">
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Terms of Use</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-footer">
+		<div class="zerogrid">
+			<div class="row">
+				<div class="copy-right">
+					<p>Copyright @ zTopModel - Designed by <a href="https://www.zerotheme.com">ZEROTHEME</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+</section>
 
 <?php wp_footer(); ?>
-
+</div>
 </body>
 </html>

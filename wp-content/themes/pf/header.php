@@ -1,58 +1,41 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package pf
- */
-
-?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+    <!-- Basic Page Needs
+    	================================================== -->
+    	<meta charset="utf-8">
+    	<title>Portfolio</title>
+    	<meta name="description" content="">
+    	<meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    	================================================== -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--[if lt IE 9]>
+		<script src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
+		<script src="<?php bloginfo('template_url'); ?>/js/css3-mediaqueries.js"></script>
+	<![endif]-->
 	<?php wp_head(); ?>
 </head>
+<body>
+	<div class="wrap-body">
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pf' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$pf_description = get_bloginfo( 'description', 'display' );
-			if ( $pf_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $pf_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pf' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+		<header >
+			<div class="zerogrid">
+				<div class="wrap-header">
+					<div class="logo t-center"><a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png"/></a></div>	
+					<div id='cssmenu' class="align-center">
+						<ul>
+							<li class="active"><a href='index.html'><span>Home</span></a></li>
+							<li><a href='single.html'><span>About</span></a></li>
+							<li><a href='gallery.html'><span>Gallery</span></a></li>
+							<li><a href='archive.html'><span>Blog</span></a>
+							</li>
+							<li class='last'><a href='contact.html'><span>Contact</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
