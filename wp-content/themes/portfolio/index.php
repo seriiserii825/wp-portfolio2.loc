@@ -15,7 +15,6 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-
         <!-- begin #main-container -->
         <div id="main-container">
             <!-- begin #profile -->
