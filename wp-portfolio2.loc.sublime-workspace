@@ -296,21 +296,9 @@
 			"file": "wp-content/themes/portfolio/index.php",
 			"settings":
 			{
-				"buffer_size": 21703,
+				"buffer_size": 19577,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "/*\nTheme Name: Portfolio\nTheme URI: http://wp-portfolio2.loc/\nAuthor: the WordPress team\nAuthor URI: http://wp-portfolio2.loc/\nDescription: \nVersion: 1.9\nLicense: GNU General Public License v2 or later\nLicense URI: http://www.gnu.org/licenses/gpl-2.0.html\nTags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready\n*/\n\n/*  ==========================================================\n\n[Table of contents]\n\n1.  basic setting\n2.  #main-container\n3.  #profile\n4.  #features\n5.  #resume\n6.  #blog\n7.  #portfolio\n8.  #contact\n9.  #blog-post\n10. #portfolio-case\n11. custom\n12. responsive\n\n==========================================================  */\n\n/*  ----------------------------------------------------------\n\n[1. Basic Setting]\n----------------------------------------------------------  */\n\n* {\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    overflow-y: hidden;\n}\n\n.preloader {\n    position: fixed;\n    left: 0;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 9999;\n    background: white;\n}\n\n.preloader svg {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -32.5px;\n    margin-left: -32.5px;\n}\n\n.preloader-left {\n    position: fixed;\n    width: 50%;\n    height: 100%;\n    background: white;\n    z-index: 999;\n    transition: .7s .3s transform ease-in-out;\n}\n\n.slide-left {\n    transform: translate3d(-100%, 0, 0);\n    will-change: transform;\n}\n\n.preloader-right {\n    position: fixed;\n    width: 50%;\n    right: 0;\n    height: 100%;\n    background: white;\n    z-index: 999;\n    transition: .7s .3s transform ease-in-out;\n}\n\n.slide-right {\n    transform: translate3d(100%, 0, 0);\n    will-change: transform;\n}\n\n/*  ----------------------------------------------------------\n[2. #main-container]\n----------------------------------------------------------  */\n\n#main-container {\n    width: 100%;\n    height: 100%;\n}\n\n#main-container > div {\n    transition: .3s all ease;\n    overflow-y: auto; \n}\n\n/*  ----------------------------------------------------------\n[3. #profile]\n----------------------------------------------------------  */\n\n#profile {\n    width: 25%;\n    background: white;\n    border-right: 1px solid #ccc;\n    position: relative;\n}\n\n#profile .expand {\n    display: none;      \n}\n\n#profile .summary {\n    padding: 30px 0;\n    border-bottom: 1px solid #ddd;\n}\n\n#profile .big-image {\n    width: 80px;\n    border-radius: 50%;\n    display: block;\n    margin: 0 auto 15px;\n}\n\n#profile .small-image {\n    width: 40px;\n    border-radius: 50%;\n}\n\n.logo-wrap {\n    display: table;\n    margin: 20px auto;\n    width: 120px;\n    height: 120px;\n    border-radius: 50%;\n    overflow: hidden;\n}\n\n.logo-wrap img {\n    width: 100%;\n    height: auto;\n}\n\n/* .logo {\n    width: 100px;\n    display: block;\n    margin: 0 auto 10px;\n    opacity: .85;\n} */\n\n.occupation {\n    text-align: center;\n    font-family: 'Droid Serif', serif;\n    color: #555;\n}\n\n.morphext > span {\n    display: none;\n}\n\n.morphext > .animated {\n    display: inline-block;\n}\n\n.hi {\n    padding: 30px 50px;\n    border-bottom: 1px solid #ddd;\n    font-family: 'Droid Serif', serif;\n    color: #3A4145;\n    font-size: 1.6rem;\n    line-height: 1.5em;\n}\n\n.hi .dropcap {\n    font-size: 5.2rem;\n    float: left;\n    line-height: 4.8rem;\n    padding-right: 7px;\n}\n\n.button {\n    margin: 30px;\n    text-align: center;\n}\n\n.download {\n    padding: 15px 25px;\n    display: inline-block;\n    color: #bbb;\n    font-family: 'Montserrat', serif;\n    border: 1px solid #bbb;\n    transition: .2s all ease;\n    border-radius: 3px;\n}\n\n.download:hover {\n    text-decoration: none;\n    color: white;\n}\n\n.social-container {\n    text-align: center;\n    width: 100%;\n}\n\n.social {\n    list-style: none;\n    display: inline-block;\n}\n\n.social li {\n    display: inline-block;\n}\n\n.social li a {\n    font-size: 22px;\n    margin: 0 4px;\n}\n\n.social li a:hover {\n    text-decoration: none;\n}\n\n/*  ----------------------------------------------------------\n[4. #features]\n----------------------------------------------------------  */\n\n#portfolio.absolute {\n    height: 400% !important;\n}\n\n#features > div {\n    height: 100%;\n    transition: .3s all ease;\n    overflow-y: hidden;\n    overflow-x: hidden;\n    cursor: pointer;\n    position: relative;\n    box-sizing: border-box;\n    width: 25%;\n    will-change: width; \n}\n\n#features .expand {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    right: 0;\n    z-index: 99;\n    overflow-y: hidden;\n}\n\n#features .add-expand {\n    left: 0;\n}\n\n.expand h1 {\n    font-family: 'Montserrat', serif;\n    text-transform: uppercase;\n    color: white;\n    margin-top: 50px;\n    text-align: center;\n    overflow-x: hidden;\n}\n\n.expand .detail {\n    text-align: center;\n    color: white;\n    position: relative;\n    top: -5px;\n    opacity: 0;\n    transition: .3s all ease;\n    overflow-x: hidden;\n}\n\n.expand:hover .detail {\n    top: 0;\n    opacity: 1;\n}\n\n.expand .icon {\n    position: absolute;\n    bottom: 50px;\n    font-size: 50px;\n    margin-left: -25px;\n    color: rgba(255,255,255,.5);\n    transition: .2s color ease;\n}\n\n.expand:hover .icon {\n    color: rgba(255,255,255,1);\n}\n\n.main-content {\n    opacity: 0;\n    position: relative;\n    left: -50px;\n    transition: .3s 0s all ease;\n}\n\n.full .main-content {\n    opacity: 1;\n    left: 0;\n    transition: .3s .3s all ease;\n}\n\n.title {\n    font-family: 'Montserrat', serif;\n    position: relative;\n    text-transform: uppercase;\n    margin-bottom: 30px;\n}\n\n.close-icon {\n    display: none;\n    position: fixed !important;\n    cursor: pointer;\n    transition: .2s all ease;\n    height: 60px;\n    width: 60px;\n    right: 38px !important;\n    top: 30px !important;\n    background: url(\"assets/img/close.svg\") no-repeat rgba(255,255,255,.5);\n    opacity: .4;\n    z-index: 999;\n}\n\n.close-icon:hover {\n    opacity: .6;\n}\n\n.full .close-icon,\n.full-blog .close-icon,\n.full-portfolio .close-icon,\n#profile .full-height .close-icon {\n    display: block !important;\n}\n\n/*  ----------------------------------------------------------\n[5. #resume]\n----------------------------------------------------------  */\n\n#resume {\n    background: rgba(255,255,255,.1);\n}\n\n#timeline {\n    width: 100%;\n    position: relative;\n    margin-bottom: 40px;\n}\n\n#timeline:before {\n    content: \"\";\n    height: 100%;\n    width: 3px;\n    background: #dfdfdf;\n    position: absolute;\n    left: 23px;\n    top: 0;\n    bottom: 0;\n    z-index: 98;\n}\n\n#timeline > div {\n    margin-bottom: 35px;\n}\n\n#timeline > div:last-child {\n    margin-bottom: 0 !important;\n}\n\n#resume .col-md-6 > .title {\n    margin-bottom: 20px !important;\n}\n\n.briefcase {\n    font-size: 20px;\n    text-align: center;\n    width: 50px;\n    padding: 15px 0;\n    color: white;\n    border-radius: 50%;\n    z-index: 99;\n    position: relative;\n    float: left;\n}\n\n.job {\n    padding-left: 70px;\n}\n\n.job-title {\n    font-family: 'Montserrat', serif;\n    font-size: 18px;\n    color: #3A4145;\n    text-transform: uppercase;\n}\n\n.job-title span {\n    font-family: 'Montserrat', Georgia, serif !important;\n    font-size: 16px !important;\n    text-transform: capitalize !important;\n}\n\n.year {\n    font-family: 'Montserrat', serif;\n    color: #999;\n    font-size: 14px;\n    margin-top: 5px;\n    display: block;\n}\n\n.job-detail {\n    margin-top: 25px;\n    padding: 15px 20px;\n    border-radius: 3px;\n    background: #eaeaea;\n    color: #666;\n    font-family: 'Droid Serif', Georgia, serif !important;\n    line-height: 1.6em;\n    position: relative;\n}\n\n.job-detail:before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 20px;\n    border-left: 8px solid transparent;\n    border-right: 8px solid transparent;\n    border-bottom: 12px solid #eaeaea;\n    transform: translateY(-100%);\n}\n\n#skills {\n    margin-bottom: 40px;\n    padding-bottom: 30px;\n    border-bottom: 1px solid #ddd;\n}\n\n#skills h2,\n#testimonials h2,\n#contact h2 {\n    margin-bottom: 20px !important;\n}\n\n.skill-item {\n    margin-bottom: 15px;\n}\n\n.skill-title {\n    font-family: 'Montserrat', serif;\n    color: #bbb;\n    font-size: 16px;\n    margin-bottom: 5px;\n}\n\n.skill-bar-bg {\n    width: 100%;\n    height: 16px;\n    background: #dfdfdf;\n    border-radius: 3px;\n}\n\n.skill-bar {\n    height: inherit;\n    border-top-left-radius: 3px;\n    border-bottom-left-radius: 3px;\n}\n\n.testi-item {\n    margin-bottom: 25px;\n}\n\n.testi-item .img-wrap {\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 10px;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    overflow: hidden;\n}\n\n.testi-item img {\n    max-width: 100%;\n    height: auto;\n}\n\n.testi-profile {\n    height: 50px;\n}\n\n.testi-profile img {\n    width: 50px;\n    border-radius: 50%;\n    float: left;\n}\n\n.testi-profile .detail {\n    display: inline-block;\n    vertical-align: middle;\n    height: inherit;\n    padding-left: 65px;\n}\n\n.testi-profile .detail h3 {\n    color: #3A4145;\n    font-family: 'Montserrat', serif;\n    margin-bottom: 3px;\n}\n\n.testi-profile .detail h4 {\n    color: #bbb;\n    font-family: 'Droid Serif', serif;\n}\n\n.words {\n    margin-top: 30px;\n    padding: 15px 20px;\n    border-radius: 3px;\n    color: white;\n    font-family: 'Droid Serif', serif !important;\n    line-height: 1.6em;\n    position: relative;\n}\n\n.words:before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 18px;\n    border-left: 8px solid transparent;\n    border-right: 8px solid transparent;\n    transform: translateY(-100%);\n}\n\n/*  ----------------------------------------------------------\n[6. #blog]\n----------------------------------------------------------  */\n\n#blog {\n    background: rgba(255,255,255,.3);\n}\n\n.blog-row {\n    position: relative;\n}\n\n.blog-item {\n    position: relative;\n    margin-bottom: 20px;\n    overflow: hidden;\n}\n\n.blog-item img {\n    transition: .3s all ease;\n}\n\n.blog-item:hover img {\n    transform: scale(1.15);\n}\n\n.blog-item .overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    text-decoration: none;\n    text-align: center;\n    transition: .3s all ease;\n    z-index: 999;\n}\n\n.blog-item .overlay h1 {\n    font-family: 'Montserrat', serif;\n    text-transform: uppercase;\n    padding: 15px;\n    border: 1px solid white;\n    display: inline-block;\n    color: white;\n    transition: .3s all ease;\n    left: -15px;\n    top: 29.5px;\n    opacity: 0;\n    position: relative;\n}\n\n.blog-item .overlay:hover {\n    background: rgba(0,0,0,.75);\n}\n\n.blog-item .overlay:hover h1 {\n    left: 0;\n    opacity: 1;\n}\n\n#blog-list-container .col-md-5 {\n    padding-left: 10px !important;\n    padding-right: 10px !important;\n}\n\n#blog-list-container img {\n    width: 100%;\n}\n\n.blog-item .detail {\n    position: relative;\n    z-index: 9999;\n    background: white;\n    border: 1px solid #ddd;\n}\n\n.blog-item .date {\n    float: left;\n    font-family: 'Montserrat', serif;\n    padding: 8px 10px;\n    border-right: 1px solid #ddd;\n}\n\n.blog-item .like {\n    float: right;\n    font-family: 'Montserrat', serif;\n    padding: 8px 10px;\n    border-left: 1px solid #ddd;\n}\n\n.blog-item .detail {\n    border-bottom-left-radius: 3px;\n    border-bottom-right-radius: 3px;\n}\n\n.blog-item .row {\n    margin-left: 0 !important;\n    margin-right: 0 !important;\n}\n\n.blog-item .date span {\n    display: block;\n    color: #777;\n    text-align: center;\n    text-transform: uppercase;\n    border-bottom-left-radius: 3px;\n}\n\n.blog-item .like span {\n    display: block;\n    color: #777;\n    text-align: center;\n    text-transform: uppercase;\n    border-bottom-right-radius-radius: 3px;\n}\n\n.blog-item .date span:first-child,\n.blog-item .like span:first-child {\n    font-size: 30px;\n}\n\n.blog-item .date span:last-child,\n.blog-item .like span:last-child {\n    font-size: 15px;\n}\n\n.blog-item .like span.fa {\n    padding: 7px 0 5px;\n}\n\n.blog-title {\n    display: block;\n    text-align: center;\n    padding: 15px 60px;\n    text-transform: capitalize;\n    font-size: 17px;\n    font-family: 'Montserrat', serif;\n    color: #666;\n}\n\n/*  ----------------------------------------------------------\n[7. #portfolio]\n----------------------------------------------------------  */\n\n#portfolio {\n    background: rgba(255,255,255,.2);\n}\n\n#filter {\n    list-style: none;\n    text-align: left;\n    margin-bottom: 30px;\n}\n\n#filter li {\n    display: inline-block;\n}\n\n#filter li a {\n    font-family: 'Montserrat', serif;\n    margin-right: 8px;\n    font-size: 16px;\n    padding: 7.5px 15px;\n    color: #666;\n    background: #eaeaea;\n    border-radius: 3px;\n    transition: .2s all ease;\n}\n\n#filter li a:hover {\n    text-decoration: none;\n}\n\n#filter li a.active {\n    color: white;\n}\n\n.masonry-item {\n    margin: 10px;\n    position: relative;\n    overflow: hidden;\n    border-radius: 3px;\n}\n\n.masonry-item img {\n    border-radius: 3px;\n    transition: .3s all ease;\n}\n\n.masonry-item:hover img {\n    transform: scale(1.15);\n}\n\n.masonry-item .overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: 3px;\n    text-decoration: none;\n    text-align: center;\n    transition: .3s all ease;\n    z-index: 999;\n}\n\n.masonry-item .overlay h1 {\n    font-family: 'Montserrat', serif;\n    text-transform: uppercase;\n    padding-bottom: 15px;\n    border-bottom: 1px solid white;\n    display: inline-block;\n    margin-bottom: 60px;\n    color: white;\n    transition: .3s all ease;\n    left: -15px;\n    opacity: 0;\n    position: relative;\n}\n\n.masonry-item .overlay h4 {\n    font-family: 'Montserrat', serif;\n    line-height: 2em;\n    color: rgba(255,255,255,.9);\n    transition: .3s 0s all ease;\n    left: -15px;\n    opacity: 0;\n    position: absolute;\n    width: 100%;\n    padding: 0 80px;\n}\n\n.masonry-item .overlay:hover {\n    background: rgba(0,0,0,.75);\n}\n\n.masonry-item .overlay:hover h1 {\n    left: 0;\n    opacity: 1;\n}\n\n.masonry-item .overlay:hover h4 {\n    left: 0;\n    transition: .3s .15s all ease;\n    opacity: 1;\n}\n\n#portfolio-case .gray {\n    color: #777;\n    margin-bottom: 15px;\n}\n\n#portfolio-case .detail {\n    font-family: 'Droid Serif', serif;\n    font-size: 18px;\n    color: #3A4145;\n    margin-bottom: 30px;\n    line-height: 1.5em\n}\n\n#portfolio-case .review {\n    padding: 15px 30px;\n    font-family: 'Montserrat', serif;\n    font-size: 22px;\n    margin-bottom: 30px;\n    color: #999;\n    line-height: 1.5em\n}\n\n.rating {\n    margin-top: 15px;\n}\n\n.btn-containr {\n    text-align: left;\n}\n\n.btn {\n    display: inline-block;\n    font-size: 16px;\n    padding: 15px 25px;\n    border-radius: 3px;\n    transition: .2s all ease;\n    background: #eaeaea;\n    border: none;\n    color: #666;\n    font-family: 'Montserrat', serif;\n}\n\n.btn:hover {\n    color: white;\n}\n\n.btn:focus {\n    outline: none;\n}\n\n\n/*  ----------------------------------------------------------\n[8. #contact]\n----------------------------------------------------------  */\n\n#contact {\n    background: rgba(255,255,255,.4);\n}\n\n/*  I put google maps style in the gmap.css */\n\n.list {\n    list-style: none;\n    padding: 30px 0 25px;\n    margin-bottom: 25px;\n    border-bottom: 1px solid #ddd;\n}\n\n.list li {\n    display: block;\n    font-size: 16px;\n    color: #777;\n    font-family: 'Droid Serif', serif;\n    margin-bottom: 5px;\n}\n\n.list .icon {\n    width: 30px;\n    font-size: 16px;\n}\n\n#contact-form {\n    margin-bottom: 30px;\n}\n\n#contact-form input[type=\"text\"],\n#contact-form input[type=\"email\"],\n#contact-form textarea,\n#comment-form input[type=\"text\"],\n#comment-form textarea {\n    width: 100%;\n    height: 50px;\n    padding: 10px 15px;\n    border: 1px solid #ddd;\n    border-radius: 3px;\n    margin-bottom: 15px;\n    transition: .2s border ease;\n    font-family: 'Droid Serif', serif;\n}\n\n#contact-form textarea,\n#comment-form textarea {\n    height: 120px;\n    line-height: 1.5em;\n}\n\n#contact-form input[type=\"text\"]:focus,\n#contact-form input[type=\"email\"]:focus,\n#contact-form textarea:focus,\n#subscribe input[type=\"email\"]:focus,\n#comment-form input[type=\"text\"]:focus,\n#comment-form textarea:focus {\n    outline: none;\n}\n\n#contact-form input[type=\"submit\"],\n#comment-form input[type=\"submit\"] {\n    display: inline-block;\n    height: 50px;\n    padding: 10px 15px;\n    border-radius: 3px;\n    transition: .2s all ease;\n    background: #eaeaea;\n    border: none;\n    color: #666;\n    font-family: 'Montserrat', serif;\n}\n\n#contact-form input[type=\"submit\"]:hover,\n#comment-form input[type=\"submit\"]:hover {\n    color: white;\n}\n\n#contact-form input[type=\"submit\"]:focus,\n#comment-form input[type=\"submit\"]:focus {\n    outline: none;\n}\n\n.sending {\n    color: white !important;\n}\n\n.error {\n    border-color: #e74c3c !important;\n    background: url(\"assets/img/attention.svg\") no-repeat;\n    background-size: 18px;\n    background-position: calc(100% - 15px) 15px;\n}\n\n.contact-notification {\n    background: url(\"assets/img/check.svg\") no-repeat;\n    background-size: 22px;\n    background-position: calc(100% - 15px) 15px;\n    position: relative;\n    font-family: 'Montserrat', serif !important;\n    top: 15px;\n    transition: .3s all ease;\n    opacity: 0;\n}\n\n.success {\n    top: 0 !important;\n    opacity: 1 !important;\n}\n\n/*  Twitter */\n\n#twitter {\n    background: #eaeaea;\n    padding: 15px 20px;\n    border-radius: 3px;\n}\n\n/*  ----------------------------------------------------------\n[9. #blog-post]\n----------------------------------------------------------  */\n\n#blog-post,\n#portfolio-case {\n    width: 0%;\n    box-sizing: border-box;\n}\n\n#blog-post .title {\n    margin-bottom: 10px !important\n}\n\n.full-blog,\n.full-portfolio {\n    width: 75% !important;\n    background: white !important;\n    cursor: auto !important;\n    overflow-y: auto !important;\n    will-change: width;\n}\n\n.full-blog .main-content,\n.full-portfolio .main-content {\n    opacity: 1;\n    left: 0;\n    transition: .3s .7s all ease;\n}\n\n#subscribe {\n    display: inline-block;\n}\n\n#subscribe input[type=\"email\"] {\n    height: 50px;\n    padding: 10px 15px;\n    border: 1px solid #ddd;\n    border-top-left-radius: 3px;\n    border-bottom-left-radius: 3px;\n    transition: .2s all ease;\n    font-family: 'Droid Serif', serif;\n    float: left;\n    width: calc(100% - 50px);\n}\n\n#subscribe input[type=\"submit\"] {\n    width: 50px;\n    border-top-right-radius: 3px;\n    border-bottom-right-radius: 3px;\n    background: url(\"assets/img/envelope.svg\") no-repeat center center;\n    background-size: cover;\n    border: none;\n    height: 50px;\n    float: left;\n}\n\n#subscribe input[type=\"submit\"]:hover {\n    opacity: .8;\n}\n\n.subscribe-notification {\n    display: block;\n    text-align: center;\n    font-family: 'Montserrat', serif;\n    margin-top: 13px;\n    position: relative;\n    transition: .3s all ease;\n    top: 15px;\n    opacity: 0;\n}\n\n.blog-details {\n    margin-bottom: 30px;\n}\n\n.blog-details .fa {\n    width: 15px;\n    color: #666;\n}\n\n.blog-details .detail {\n    margin-right: 10px;\n    color: #666;\n    font-family: 'Droid Serif', serif;\n}\n\n.blog-img,\n.portfolio-img {\n    width: 100%;\n    border-radius: 3px;\n    margin-bottom: 10px;\n}\n\n.portfolio-img {\n    margin-bottom: 30px !important;\n}\n\n.blog-source {\n    text-align: right;\n    padding-bottom: 30px;\n    border-bottom: 1px solid #ddd;\n}\n\n.blog-source > div {\n    display: inline-block;\n    font-family: 'Droid Serif', serif;\n    color: #666;\n}\n\n.blog-content {\n    padding: 30px 0;\n    font-family: 'Droid Serif', serif;\n    color: #3A4145;\n    font-size: 1.6rem;\n    line-height: 1.5em;\n}\n\n.blog-content .dropcap {\n    font-size: 5.2rem;\n    float: left;\n    line-height: 4.8rem;\n    padding-right: 7px;\n}\n\n.quotes {\n    font-family: 'Montserrat', serif;\n    font-size: 1.8rem;\n    line-height: 1.5em;\n    color: #777;\n    background: #eee;\n    display: inline-block;\n    padding: 20px 20px;\n}\n\n.quoter-container {\n    display: block;\n    text-align: left;\n}\n\n.quoter {\n    color: #666;\n    font-family: 'Montserrat', serif;\n    margin-top: 20px;\n    padding-top: 13px;\n    border-top: 1px solid #dcdcdc;\n    font-size: 2.2rem !important;\n    font-weight: 700;\n    display: inline-block;\n}\n\n.interaction {\n    text-align: left;\n    padding-top: 30px;\n    border-top: 1px solid #ddd;\n}\n\n.interaction > div {\n    display: inline-block;\n    color: #666;\n    font-family: 'Montserrat', serif;\n    font-size: 16px;\n    cursor: pointer;\n    margin-right: 10px;\n}\n\n#comment-form {\n    margin-top: 30px;\n}\n\n.reader-comments {\n    margin-top: 30px;\n}\n\n.comment-container {\n    min-height: 80px;\n    margin-bottom: 30px;\n}\n\n.comment-container.level-two {\n    margin-left: 105px;\n}\n\n.comment-container img {\n    width: 80px;\n    float: left;\n    border-radius: 50%;\n}\n\n.comment-container.level-two img {\n    width: 60px !important;\n}\n\n.comment-content {\n    padding: 15px 20px;\n    border-radius: 3px;\n    background: #eaeaea;\n    line-height: 1.6em;\n    position: relative;\n    margin-left: 105px;\n    color: #666;\n}\n\n.level-two .comment-content {\n    margin-left: 85px !important;\n}\n\n.comment-content:before {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 20px;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-right: 12px solid #eaeaea;\n    transform: translateX(-100%);\n}\n\n.reader-name {\n    font-family: 'Montserrat', serif;\n    margin-bottom: 15px\n}\n\n.comment-content .detail {\n    font-family: 'Droid Serif', Georgia, serif !important;\n}\n\n.comment-interaction {\n    margin-top: 15px;\n}\n\n.comment-interaction > span {\n    font-family: 'Montserrat', Georgia, serif !important;\n}\n\n.comment-interaction > span:first-child {\n    margin-right: 5px;\n    color: #999 !important;\n}\n\n.reply {\n    cursor: pointer;\n}\n\n/*  ----------------------------------------------------------\n[11. Custom]\n----------------------------------------------------------  */\n\n::-webkit-scrollbar {\n    width: 10px;\n}\n \n::-webkit-scrollbar-track {\n    background: #eee;\n}\n \n::-webkit-scrollbar-thumb {\n    background: rgba(0,0,0,.2); \n}\n\n/*  ----------------------------------------------------------\n[12. Responsive]\n----------------------------------------------------------  */\n\n/*  Min width : 768px */\n\n@media (min-width: 768px) {\n\n    #main-container > div {\n        float: left;\n        height: 100%;\n    }\n\n    .hi {\n        min-height: 181px;\n    }\n\n    #features {\n        width: 75%;\n        /*  Slideshow backgroud\n        background: url(\"assets/img/bg.jpg\") no-repeat center center !important;\n        */\n    }\n\n    #features > div {\n        float: left;\n        padding: 30px;\n    }\n\n    .full {\n        width: 100% !important;\n        background: white !important;\n        cursor: auto !important;\n        overflow-y: auto !important;\n        will-change: width;\n    }\n\n    .zero {\n        width: 0% !important;\n        padding: 0 !important;\n        will-change: width;\n    }\n\n    .absolute {\n        position: absolute !important;\n        width: 75% !important;\n    }\n\n    .blog-row {\n        position: relative;\n        left: -7.5px !important;\n    }\n\n    #masonry-container {\n        left: -10px !important;\n    }\n\n    .social-container {\n        position: absolute;\n        bottom: 30px;\n    }\n\n    .icon-left {\n        left: 50%;\n    }\n\n    .blog-item .overlay,\n    .masonry-item .overlay {\n        padding: 80px;\n    }\n\n    .masonry-item .overlay h4 {\n        bottom: 80px;\n    }\n\n    #blog-post,\n    #portfolio-case {\n        padding: 30px;\n    }\n\n}\n\n/*  Max width : 768px */\n\n@media (max-width: 767px) {\n\n    #profile {\n        width: 100%;\n        height: 20%;\n    }\n\n    .main-content-profile {\n        opacity: 0;\n        position: relative;\n        top: -50px;\n        transition: .3s 0s all ease;\n    }\n\n    .full-height .main-content-profile {\n        opacity: 1;\n        top: 0;\n        transition: .3s .3s all ease;\n    }\n\n    #profile .expand {\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n        bottom: 0;\n        display: block;\n        cursor: pointer;\n        z-index: 99;\n    }\n\n    #profile .expand-profile {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        display: block;\n        cursor: pointer;\n        z-index: 99;\n    }\n\n    .profile {\n        overflow-y: hidden !important;\n    }\n\n    .profile-off {\n        opacity: 0;\n        pointer-events: none;\n    }\n\n    #profile .expand h1,\n    #profile .expand .fa {\n        color: #666;\n    }\n\n    #blog-post,\n    #portfolio-case {\n        height: 80% !important;\n    }\n\n    #features {\n        height: 80% !important;\n    }\n\n    .full-height {\n        height: 100% !important;\n        background: white !important;\n        cursor: auto !important;\n        overflow-y: auto !important;\n        will-change: height;\n    }\n\n    .zero-height {\n        height: 0% !important;\n        padding: 0 !important;\n        will-change: width;\n    }\n\n    #features > div {\n        width: 100%;\n        height: 25%;\n    }\n\n    #blog-post,\n    #portfolio-case {\n        width: 100% !important;\n    }\n\n    .expand .detail {\n        display: none !important;\n    }\n\n    .expand h1 {\n        position: absolute;\n        text-align: left;\n        top: 50%;\n        right: 0;\n        left: 25px;\n        bottom: 0;\n        margin-top: -20px !important;\n    }\n\n    .expand .icon {\n        bottom: 0 !important;\n        right: 25px;\n        font-size: 40px;\n        top: 50%;\n        margin-top: -20px;  \n        display: inline-block;\n    }\n\n    .main-content {\n        left: 0 !important;\n        top: -50px;\n    }\n\n    .full .main-content {\n        top: 0;\n    }\n\n    .full-blog .main-content,\n    .full-portfolio .main-content {\n        top: 0;\n    }\n\n    .masonry-item img {\n        width: 100%;\n    }\n\n    .social-container {\n        margin-bottom: 30px;\n    }\n\n    .blog-item .overlay,\n    .masonry-item .overlay {\n        padding: 40px;\n    }\n\n    .masonry-item .overlay h4 {\n        bottom: 40px;\n    }\n\n    #features > div,\n    #blog-post,\n    #portfolio-case {\n        padding: 30px;\n    }\n\n    .close-icon {\n        top: 0 !important;\n        background-position: center center !important;\n        height: 20% !important;\n        right: 0 !important;\n        left: 0 !important;\n        margin-right: 0;\n        border-bottom: 1px solid #999;\n        width: 100%;\n    }\n\n    .profile-blog {\n        opacity: 0;\n        pointer-events: none;\n    }\n\n    #twitter {\n        margin-bottom: 30px\n    }\n\n}\n\n/*  Max width : 480px */\n\n@media (max-width: 480px) {\n\n    .blog-item .overlay,\n    .masonry-item .overlay {\n        padding: 20px !important;\n    }\n\n    .masonry-item .overlay h4 {\n        bottom: 20px !important;\n    }\n\n    .blog-item .overlay h1,\n    .masonry-item .overlay h1 {\n        font-size: 20px;\n    }\n\n    .masonry-item .overlay h4 {\n        padding: 0 20px !important;\n        font-size: 16px;\n    }   \n\n    #features > div,\n    #blog-post,\n    #portfolio-case  {\n        padding: 15px;\n    }\n\n    #filter li a {\n        padding: 5px 7.5px;\n        font-size: 14px;\n    }\n\n    .blog-item .date,\n    .blog-item .like {\n        padding: 8px;\n        border: none;\n    }\n\n    .blog-item .date span:first-child,\n    .blog-item .like span:first-child {\n        font-size: 20px;\n    }\n\n    .blog-item .date span:last-child,\n    .blog-item .like span:last-child {\n        font-size: 10px;\n    }\n\n}\n\n.typer-detail {\n    font-family: 'Helvetica Neue', serif;\n    font-size: 20px;\n    font-style: italic;\n}\n\n.portfolio {\n\n}\n\n.portfolio-item-wrap {\n    display: flex;\n    justify-content: space-between;\n    max-width: 880px;\n}\n\n.portfolio-item {\n    position: relative;\n    margin-bottom: 30px;\n    width: 49%;\n    border: 3px solid #d4d2d2;\n    border-radius: 4px;\n    transition: all .3s ease;\n}\n\n.portfolio-item .overlay {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 30px;\n    border-radius: 3px;\n    text-decoration: none;\n    text-align: center;\n    color: white;\n    background: rgba(0,0,0,.6);\n    transition: .3s all ease;\n    z-index: 999;\n    opacity: 0;\n}\n\n.portfolio-content {\n    display: table;\n}\n\n.portfolio-item:hover .overlay {\n    opacity: 1;\n}\n\n.portfolio-item:hover {\n    box-shadow: 0 4px 15px rgba(0,0,0,.2);\n}\n\n.portfolio-item img {\n    max-width: 100%;\n    height: auto;\n}",
-			"file": "wp-content/themes/portfolio/style.css",
-			"file_size": 29962,
-			"file_write_time": 131692927340629967,
-			"settings":
-			{
-				"buffer_size": 28361,
-				"line_ending": "Windows",
-				"scratch": true
 			}
 		},
 		{
@@ -469,6 +457,8 @@
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/style.css",
+		"/C/OSPanel/domains/wp-portfolio2.loc/wp-config.php",
 		"/C/Users/User/Downloads/WordPress-Мастер/premiumwp/Цикл Премиум-видеоуроков по CMS WordPress/3/www/index.php",
 		"/C/Users/User/Downloads/katya/katya/index.html",
 		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/assets/js/jquery.typer.js",
@@ -479,7 +469,6 @@
 		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/assets/index.html",
 		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/assets/css/style.css",
 		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/twentyfifteen/style.css",
-		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/style.css",
 		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/header.php",
 		"/C/OSPanel/domains/wp-portfolio2.loc/wp-content/themes/portfolio/screenshot.png",
 		"/C/Users/User/Desktop/test/style.css",
@@ -596,7 +585,7 @@
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -610,6 +599,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$i",
 			"register",
 			"____",
 			"testi",
@@ -668,7 +658,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -684,13 +674,16 @@
 						"selection":
 						[
 							[
-								3436,
-								3436
+								9647,
+								9647
 							]
 						],
 						"settings":
 						{
 							"SL.14.region_keys":
+							[
+							],
+							"SL.17.region_keys":
 							[
 							],
 							"SL.96.region_keys":
@@ -703,27 +696,12 @@
 							{
 								"close":
 								{
-									"1":
-									[
-										3297,
-										3298
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										3173,
-										3174
-									]
 								},
 								"unmatched":
 								{
@@ -736,56 +714,56 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
-								"bh_regex_content"
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -800,81 +778,77 @@
 								},
 								"unmatched":
 								{
-									"1":
-									[
-										5371,
-										5372
-									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
+								"bh_round_content"
 							],
 							"easy_motion_mode": false,
 							"git_gutter_is_enabled": true,
 							"git_savvy.repo_path": "C:\\OSPanel\\domains\\wp-portfolio2.loc",
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -883,15 +857,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21703,
+						"buffer_size": 19577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1067,
+								1036
 							]
 						],
 						"settings":
@@ -900,6 +874,9 @@
 							[
 							],
 							"SL.16.region_keys":
+							[
+							],
+							"SL.18.region_keys":
 							[
 							],
 							"SL.92.region_keys":
@@ -914,24 +891,24 @@
 								{
 									"1":
 									[
-										11306,
-										11307
+										11833,
+										11838
 									]
 								},
 								"icon":
 								{
 									"1":
 									[
-										"Packages/BracketHighlighter/icons/double_quote.png",
-										"region.greenish"
+										"Packages/BracketHighlighter/icons/dot.png",
+										"region.yellowish brackethighlighter.default"
 									]
 								},
 								"open":
 								{
 									"1":
 									[
-										11286,
-										11287
+										11701,
+										11703
 									]
 								},
 								"unmatched":
@@ -940,26 +917,6 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -970,74 +927,99 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										10842,
-										10843
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/round_bracket.png",
-										"region.yellowish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										10830,
-										10831
-									]
 								},
 								"unmatched":
 								{
+									"1":
+									[
+										2441,
+										2449
+									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1048,41 +1030,26 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
 							],
 							"easy_motion_mode": false,
 							"git_gutter_is_enabled": true,
@@ -1092,232 +1059,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 160.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "wp-content/themes/portfolio/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28361,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27739,
-								27739
-							]
-						],
-						"settings":
-						{
-							"SL.17.region_keys":
-							[
-							],
-							"SL.63.region_keys":
-							[
-							],
-							"apply_syntax_touched": true,
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										27685,
-										27686
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										27659,
-										27660
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										27741,
-										27742
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										27589,
-										27590
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Afterglow-monokai.tmTheme",
-							"easy_motion_mode": false,
-							"git_gutter_is_enabled": false,
-							"git_savvy.repo_path": "C:\\OSPanel\\domains\\wp-portfolio2.loc",
-							"open_with_edit": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 30972.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "wp-content/themes/portfolio/assets/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -1339,6 +1088,9 @@
 							[
 							],
 							"SL.16.region_keys":
+							[
+							],
+							"SL.17.region_keys":
 							[
 							],
 							"SL.18.region_keys":
@@ -1467,61 +1219,61 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content"
+								"bh_round_content"
 							],
 							"git_gutter_is_enabled": true,
 							"git_savvy.repo_path": "C:\\OSPanel\\domains\\wp-portfolio2.loc",
@@ -1532,7 +1284,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1589,7 +1341,7 @@
 	"project": "wp-portfolio2.loc.sublime-project",
 	"replace":
 	{
-		"height": 74.0
+		"height": 52.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1598,6 +1350,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"wp-config",
+				"wp-config.php"
+			],
 			[
 				"main.js",
 				"wp-content\\themes\\portfolio\\assets\\js\\main.js"

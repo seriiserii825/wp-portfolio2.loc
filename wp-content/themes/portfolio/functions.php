@@ -39,7 +39,6 @@ function portfolio_scripts() {
 	
 	//styles
 	wp_enqueue_style( 'portfolio-twitter', get_template_directory_uri() . '/assets/css/twitter.css' );
-	wp_enqueue_style( 'portfolio-preloader', get_template_directory_uri() . '/assets/css/preloader.css' );
 	wp_enqueue_style( 'portfolio-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
 	wp_enqueue_style( 'portfolio-animate', get_template_directory_uri() . '/assets/css/animate.css' );
 	wp_enqueue_style( 'portfolio-font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.css' );
@@ -65,11 +64,7 @@ function portfolio_scripts() {
 	wp_enqueue_script( 'portfolio-smoothScrolls', get_template_directory_uri() . '/assets/js/smoothScrolls.js', [ 'portfolio-jquery' ], null, true );
 	wp_enqueue_script( 'portfolio-owl.carousel.min', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', [ 'portfolio-jquery' ], null, true );
 	wp_enqueue_script( 'portfolio-twitter', get_template_directory_uri() . '/assets/js/twitter.js', [ 'portfolio-jquery' ], null, true );
-	/*wp_enqueue_script( 'portfolio-gmap', get_template_directory_uri() .'/assets/js/gmap.js', ['portfolio-jquery'], null, true );*/
-	/*wp_enqueue_script( 'portfolio-google-map', 'http://maps.google.com/maps/api/js?sensor=true/false', [], null, true );*/
 	wp_enqueue_script( 'portfolio-main', get_template_directory_uri() . '/assets/js/main.js', [ 'portfolio-jquery' ], null, true );
-	
-	
 }
 
 /**

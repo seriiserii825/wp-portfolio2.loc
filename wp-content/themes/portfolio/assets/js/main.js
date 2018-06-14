@@ -25,34 +25,6 @@
 		    speed: 2500
 		});
 
-		// Preloader
-
-      	$(window).load(function() {
-      		$(".preloader").fadeOut("slow", function(){
-      			$("#resume, #blog, #portfolio, #contact").removeClass("absolute");
-      			$(".preloader-left").addClass("slide-left");
-      			$(".preloader-right").addClass("slide-right");
-
-      			//	Typerjs function - Edit the sentences below
-      			//	https://www.jqueryscript.net/text/Animated-Typewriter-Effect-with-jQuery-typer-js.html
-				var typerText = $('#js-detail').text();
-
-				var win = $(window),
-                foo = $('#js-detail');
-
-                var textData = getSentences(typerText);
-
-                function getSentences(text){
-                	var arr = text.split('. ');	
-                	return arr;
-                }
-
-            	foo.typer(textData);
-      		});
-		});
-
-	    //	Features animation function
-
 	    $("#profile .expand, #profile .expand-profile").on("click", function() {
 			$("#profile").toggleClass("full-height").removeClass("profile");
 			$("#profile .expand").hide();

@@ -15,13 +15,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
-        <!-- begin .preloader -->
-        <div class="preloader">
-            <div class="spinner"></div>
-        </div>
-        <div class="preloader-left"></div>
-        <div class="preloader-right"></div>
-        <!-- end preloader -->
+
         <!-- begin #main-container -->
         <div id="main-container">
             <!-- begin #profile -->
@@ -86,7 +80,7 @@
             <!-- begin #features -->
             <div id="features">
                 <!-- begin #resume -->
-                <div id="resume" class="absolute">
+                <div id="resume">
                     <div id="top-resume" class="expand add-expand">
                         <h1>My experience</h1>
                         <div class="detail">View my work experience</div>
@@ -186,7 +180,7 @@
                 </div>
                 <!-- end #resume -->
                 <!-- begin #portfolio -->
-                <div id="portfolio" class="absolute">
+                <div id="portfolio">
                     <div id="top-portfolio" class="expand add-expand">
                         <h1>Portfolio</h1>
                         <div class="detail">View my work</div>
@@ -228,7 +222,7 @@
                 </div>
                 <!-- end #portfolio -->
                 <!-- begin #blog -->
-                <!--<div id="blog" class="absolute">
+                <div id="blog">
                     <div id="top-blog" class="expand add-expand">
                         <h1>Blog</h1>
                         <div class="detail">Read My Thoughts</div>
@@ -238,14 +232,14 @@
                         <a href="#top-blog" class="close-icon expand"></a>
                         <h1 class="title">My Latest Blog</h1>
                         <div class="blog-row row">
-                            <div id="blog-list-container" class="col-md-12">-->
+                            <div id="blog-list-container" class="col-md-12">
                                 <!-- begin #blog-item -->
-                                <!--<div class="col-md-5">
+                                <div class="col-md-6">
                                     <div class="blog-item">
                                         <a class="overlay" href="blog-post.html">
                                             <h1>Read More</h1>
                                         </a>
-                                        <img src="<?php /*bloginfo( 'template_url' ); */?>/assets/img/blog/1.jpg" alt="Blog thumbnail">
+                                        <img src="<?php bloginfo( 'template_url' );?>/assets/img/blog/1.jpg" alt="Blog thumbnail">
                                         <div class="detail row">
                                             <div class="date">
                                                 <span>18</span>
@@ -258,15 +252,37 @@
                                             <div class="blog-title">20 things i learn as developer</div>
                                         </div>
                                     </div>
-                                </div>-->
+                                </div>
                                 <!-- end #blog-item -->
-                            <!--</div>
+
+                                <!-- begin #blog-item -->
+                                <div class="col-md-6">
+                                    <div class="blog-item">
+                                        <a class="overlay" href="blog-post.html">
+                                            <h1>Read More</h1>
+                                        </a>
+                                        <img src="<?php bloginfo( 'template_url' );?>/assets/img/blog/1.jpg" alt="Blog thumbnail">
+                                        <div class="detail row">
+                                            <div class="date">
+                                                <span>18</span>
+                                                <span>may</span>
+                                            </div>
+                                            <div class="like">
+                                                <span class="fa fa-heart"></span>
+                                                <span>13</span>
+                                            </div>
+                                            <div class="blog-title">20 things i learn as developer</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end #blog-item -->
+                            </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
                 <!-- end #blog -->
                 <!-- begin #contact -->
-                <div id="contact" class="absolute">
+                <div id="contact">
                     <div id="top-contact" class="expand add-expand">
                         <h1>Contacts</h1>
                         <div class="detail">Get in Touch</div>
