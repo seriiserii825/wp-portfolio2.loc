@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head <?php language_attributes(); ?> >
-        <title><?php echo wp_get_document_title(); ?></title>
         <meta charset="utf-8">
         <meta name="description" content="Responsive Creative CV Template">
         <meta name="author" content="balapa">

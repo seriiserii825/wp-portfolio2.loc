@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
 
     <!-- Basic Page Needs
     	================================================== -->
     	<meta charset="utf-8">
-    	<title>Portfolio</title>
     	<meta name="description" content="">
     	<meta name="author" content="">
 
@@ -19,23 +18,28 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php  body_class(); ?>>
 	<div class="wrap-body">
 
 		<header >
 			<div class="zerogrid">
 				<div class="wrap-header">
-					<div class="logo t-center"><a href="index.html"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png"/></a></div>	
-					<div id='cssmenu' class="align-center">
-						<ul>
-							<li class="active"><a href='index.html'><span>Home</span></a></li>
-							<li><a href='single.html'><span>About</span></a></li>
-							<li><a href='gallery.html'><span>Gallery</span></a></li>
-							<li><a href='archive.html'><span>Blog</span></a>
-							</li>
-							<li class='last'><a href='contact.html'><span>Contact</span></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</header>
+					<div class="logo t-center">
+                        <a href="index.html">
+                            <?php the_custom_logo(); ?>
+                        </a>
+                    </div>
+                    
+                    <div id='cssmenu' class="align-center">
+                      <ul>
+                         <li class="active"><a href='index.html'><span>Home</span></a></li>
+                         <li><a href='single.html'><span>About</span></a></li>
+                         <li><a href='gallery.html'><span>Gallery</span></a></li>
+                         <li><a href='archive.html'><span>Blog</span></a>
+                         </li>
+                         <li class='last'><a href='contact.html'><span>Contact</span></a></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </header>
