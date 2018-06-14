@@ -16,11 +16,11 @@
     </head>
     <body <?php body_class(); ?>>
         <!-- begin .preloader -->
-        <div class="preloader">
+        <!-- <div class="preloader">
             <div class="spinner"></div>
         </div>
         <div class="preloader-left"></div>
-        <div class="preloader-right"></div>
+        <div class="preloader-right"></div> -->
         <!-- end preloader -->
         <!-- begin #main-container -->
         <div id="main-container">
