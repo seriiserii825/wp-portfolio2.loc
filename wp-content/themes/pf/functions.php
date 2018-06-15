@@ -87,6 +87,27 @@ function register_post_types(){
 		'public'              => true,
 		'supports'            => array('title','editor', 'thumbnail'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 	) );
+
+	register_post_type('reviews', array(
+		'label'  => null,
+		'labels' => array(
+			'name'               => 'Отзывы', // основное название для типа записи
+			'singular_name'      => 'Отзывы', // название для одной записи этого типа
+			'add_new'            => 'Добавить отзыв', // для добавления новой записи
+			'add_new_item'       => 'Добавление отзыв', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование отзыв', // для редактирования типа записи
+			'new_item'           => 'Новое отзыв', // текст новой записи
+			'view_item'          => 'Смотреть отзыв', // для просмотра записи этого типа.
+			'search_items'       => 'Искать отзыв', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'parent_item_colon'  => '', // для родителей (у древовидных типов)
+			'menu_name'          => 'Отзывы', // название меню
+		),
+		'description'         => '',
+		'public'              => true,
+		'supports'            => array('title','editor', 'thumbnail'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+	) );
 }
 
 

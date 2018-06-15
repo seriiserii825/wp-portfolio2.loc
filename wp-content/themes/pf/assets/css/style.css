@@ -57,7 +57,7 @@ hr.line{height: 1px; padding: 0;margin: 0 auto;color: #888;background: #717171;b
 body {
     background: #0f192f;
 }
-body .wrap-body{}
+
 
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Header--------------------------------- */
@@ -292,4 +292,69 @@ img {
     border: 3px solid #085679;
     cursor: pointer;
     overflow: hidden;
+}
+
+.slider-reviews {
+    margin: 0 auto;
+    max-width: 600px;
+    border: none; 
+}
+
+.slider-reviews .slick-list {
+    border: 6px solid #085679;
+}
+
+.slider-reviews .slider__item {
+    padding: 15px;
+    height: 100%;
+    color: #444;
+    background: #fff;
+}
+
+.slider-reviews .slider__item a {
+    color: inherit;
+}
+
+.slider-reviews__header {
+    display: flex;
+}
+
+.slider-reviews h4 {
+    font-size: 20px;
+    color: inherit;
+}
+
+.slider-reviews__header img {
+    margin-right: 20px;
+}
+
+.slider-reviews .slider__item p {
+    height: 40px;
+    overflow: hidden;
+}
+
+.slider-reviews .slick-dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-reviews .slick-dots li {
+    margin: 0 2px;
+    width: 14px;
+    height: 14px;
+    border: none;
+    background: #085679;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-reviews .slick-dots li.slick-active {
+    background: #16adf1;
+}
+
+.slider-reviews .slick-dots button {
+    display: none;
+    font-size: 0;
+    background: transparent;
 }

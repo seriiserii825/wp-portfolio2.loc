@@ -52,6 +52,11 @@
               ]
         });
 
+        $('#js-slider-reviews').slick({
+            'arrows': false,
+            'dots': true
+        });
+
         /* Mobile */
         $("#menu-trigger").on("click", function(){
             $("#menu").slideToggle();
