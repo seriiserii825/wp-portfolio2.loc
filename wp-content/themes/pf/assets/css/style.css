@@ -358,3 +358,16 @@ img {
     font-size: 0;
     background: transparent;
 }
+
+#ff input {
+    transition: all .3s ease;
+}
+
+#ff textarea:hover,
+#ff input:hover {
+    background: #434e58;
+}
+
+#ff input[type="submit"] {
+    cursor: pointer;
+}
