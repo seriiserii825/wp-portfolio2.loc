@@ -18,6 +18,40 @@
             fixedBackground: true
         });
 
+        $('#js-slider').slick({
+            'arrows': false,
+            'asNavFor': '.slider-small',
+            'fade': true
+        });
+
+        $('#js-slider-small').slick({
+            'arrows': false,
+            'slidesToShow': 5,
+            'slidesToScroll': 3,
+            'asNavFor': '.slider',
+            'focusOnSelect': true,
+            responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 4
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 3
+                  }
+                },
+                {
+                  breakpoint: 486,
+                  settings: {
+                    slidesToShow: 2
+                  }
+                }
+              ]
+        });
+
         /* Mobile */
         $("#menu-trigger").on("click", function(){
             $("#menu").slideToggle();

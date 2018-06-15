@@ -25,20 +25,21 @@
 			<div class="zerogrid">
 				<div class="wrap-header">
 					<div class="logo t-center">
-                        <a href="index.html">
+                        <a href="<?php echo home_url(); ?>">
                             <?php the_custom_logo(); ?>
                         </a>
                     </div>
-                    
+
                     <div id='cssmenu' class="align-center">
-                      <ul>
-                         <li class="active"><a href='index.html'><span>Home</span></a></li>
-                         <li><a href='single.html'><span>About</span></a></li>
-                         <li><a href='gallery.html'><span>Gallery</span></a></li>
-                         <li><a href='archive.html'><span>Blog</span></a>
-                         </li>
-                         <li class='last'><a href='contact.html'><span>Contact</span></a></li>
-                     </ul>
+                        <?php wp_nav_menu( array(
+                            'theme_location'  => 'header-menu',
+                            'menu'            => '',
+                            'container'       => '',
+                            'menu_class'      => 'menu',
+                            'menu_id'         => '',
+                            'echo'            => true,
+                            'items_wrap'      => '<ul>%3$s</ul>',
+                        ) ); ?>
                  </div>
              </div>
          </div>

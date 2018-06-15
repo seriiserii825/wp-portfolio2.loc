@@ -2,7 +2,7 @@
 	<div class="wrap-footer">
 		<div class="zerogrid">
 			<div class="row">
-				<span class="phone">PHONE: +1 800 559 6580</span>
+				<span class="phone">PHONE: +373 60562 168</span>
 				<ul class="bottom-social">
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -21,7 +21,7 @@
 		<div class="zerogrid">
 			<div class="row">
 				<div class="copy-right">
-					<p>Copyright @ zTopModel - Designed by <a href="https://www.zerotheme.com">ZEROTHEME</a></p>
+					<p>Copyright @ <a href="mailto:seriiburduja@gmail.com">seriiburduja@gmail.com</a> - Designed by Burduja Serghei</p>
 				</div>
 			</div>
 		</div>

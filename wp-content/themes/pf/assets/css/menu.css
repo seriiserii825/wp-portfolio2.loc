@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
 #cssmenu {
   background: none;
   margin-top: 80px;
@@ -104,11 +103,11 @@
   padding: 11px 10px 11px 20px;
 }
 #cssmenu ul li ul li:hover > a,
-#cssmenu ul li ul li.active > a {
+#cssmenu ul li ul li.current-menu-item > a {
   color: #00dacc;
 }
 #cssmenu ul li ul li:hover:after,
-#cssmenu ul li ul li.active:after {
+#cssmenu ul li ul li.current-menu-item:after {
   background: #00dacc;
 }
 #cssmenu ul li ul li:hover > ul {
@@ -198,19 +197,19 @@
   position: relative;
 }
 #cssmenu > ul > li:hover:after,
-#cssmenu > ul > li.active:after {
+#cssmenu > ul > li.current-menu-item:after {
   height: 100%;
 }
 #cssmenu > ul > li:hover > a,
-#cssmenu > ul > li.active > a {
+#cssmenu > ul > li.current-menu-item > a {
   color: #000000;
 }
 #cssmenu > ul > li:hover > a:after,
-#cssmenu > ul > li.active > a:after {
+#cssmenu > ul > li.current-menu-item > a:after {
   background: #000000;
 }
 #cssmenu > ul > li:hover > a:before,
-#cssmenu > ul > li.active > a:before {
+#cssmenu > ul > li.current-menu-item > a:before {
   border-top-color: #ffffff;
 }
 #cssmenu > ul > li:hover > ul {
