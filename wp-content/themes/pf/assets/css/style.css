@@ -55,6 +55,9 @@ hr.line{height: 1px; padding: 0;margin: 0 auto;color: #888;background: #717171;b
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
 body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     background: #0f192f;
 }
 
@@ -296,8 +299,15 @@ img {
 
 .slider-reviews {
     margin: 0 auto;
+    margin-top: 40px;
     max-width: 600px;
     border: none; 
+}
+
+.reviews-title {
+    margin-top: 80px;
+    font-size: 24px;
+    text-align: center;
 }
 
 .slider-reviews .slick-list {
@@ -359,7 +369,10 @@ img {
     background: transparent;
 }
 
+#ff textarea,
 #ff input {
+    color: #eee;
+    background: #434e58;
     transition: all .3s ease;
 }
 
@@ -370,4 +383,76 @@ img {
 
 #ff input[type="submit"] {
     cursor: pointer;
+}
+
+.my-photo {
+    margin: 0 auto;
+    max-width: 175px;
+    border: 2px solid #1e5e7b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-wrap a {
+    color: #00dacc;
+    text-decoration: underline;
+}
+
+.container-wrap a:hover {
+    text-decoration: none;
+}
+
+.blog-sidebar{
+     width: 400px;
+}
+
+.blog-content {
+    flex-grow: 1;
+    margin-right: 30px;
+    padding: 20px;
+    color: #d2d2d2;
+    background: #2a3940;
+}
+
+.blog-content p {
+    color: inherit;
+}
+
+.post-item {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ccc;
+}
+
+.blog-sidebar {
+    padding: 15px;
+    color: #d2d2d2;
+    background: #2a3940;
+}
+
+.search-field {
+    height: 30px;
+    line-height: 30px;
+    text-indent: 10px;
+    color: #ccc;
+    background: #444;
+    border: none;
+    outline: none;
+}
+
+.search-submit {
+    padding: 0 15px;
+    text-transform: uppercase;
+    height: 30px;
+    line-height: 30px;
+    color: #ccc;
+    background: #444;
 }

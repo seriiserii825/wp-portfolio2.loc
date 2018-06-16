@@ -11,6 +11,7 @@
     <!-- Mobile Specific Metas
     	================================================== -->
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <!--[if lt IE 9]>
 		<script src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
@@ -19,28 +20,31 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php  body_class(); ?>>
-	<div class="wrap-body">
+	<header >
+		<div class="zerogrid">
+			<div class="wrap-header">
+				<div class="logo t-center">
+                    <?php the_custom_logo(); ?>
+                </div>
 
-		<header >
-			<div class="zerogrid">
-				<div class="wrap-header">
-					<div class="logo t-center">
-                        <a href="<?php echo home_url(); ?>">
-                            <?php the_custom_logo(); ?>
-                        </a>
-                    </div>
+                <div class="my-photo">
+                    <?php 
+                        $options = get_option('wfm_options_page')['wfm_options_admin_img'];
+                    ?>
+                    <img src="<?php echo $options; ?>" alt="">
+                </div>
 
-                    <div id='cssmenu' class="align-center">
-                        <?php wp_nav_menu( array(
-                            'theme_location'  => 'header-menu',
-                            'menu'            => '',
-                            'container'       => '',
-                            'menu_class'      => 'menu',
-                            'menu_id'         => '',
-                            'echo'            => true,
-                            'items_wrap'      => '<ul>%3$s</ul>',
-                        ) ); ?>
-                 </div>
+                <div id='cssmenu' class="align-center">
+                    <?php wp_nav_menu( array(
+                        'theme_location'  => 'header-menu',
+                        'menu'            => '',
+                        'container'       => '',
+                        'menu_class'      => 'menu',
+                        'menu_id'         => '',
+                        'echo'            => true,
+                        'items_wrap'      => '<ul>%3$s</ul>',
+                    ) ); ?>
              </div>
          </div>
-     </header>
+     </div>
+    </header>

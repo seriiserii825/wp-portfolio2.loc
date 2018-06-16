@@ -2,6 +2,19 @@
 
 add_action( 'after_setup_theme', 'pf_setup' );
 add_action('init', 'register_post_types');
+add_action( 'widgets_init', 'register_my_widgets' );
+function register_my_widgets(){
+	register_sidebar( array(
+		'name'          => 'Виджет сайдбара',
+		'id'            => "sidebar-widget",
+		'description'   => 'Виджеты сайдбара',
+		'class'         => '',
+		'before_widget' => '<div class="widget %2$s">',
+		'after_widget'  => "</div>\n",
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => "</h2>\n",
+	) );
+}
 
 if ( ! function_exists( 'pf_setup' ) ) :
 	/**

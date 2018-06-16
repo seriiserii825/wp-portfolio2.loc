@@ -1,37 +1,29 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package pf
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+<section id="container" class="container">
+	<div class="container-wrap">
+		<div class="blog-content">
+			<?php if ( have_posts() ) : the_post(); ?>
+			  	<div class="post-item">
+			  		<h2><?php the_title(); ?></h2>
+			  		<p><?php the_content(); ?></p>
+			  	</div>
+			<?php endif; ?>
+		</div>
+		
+		<aside class="blog-sidebar">
+			<?php if(is_active_sidebar( 'sidebar-widget' )): ?>
+				<?php dynamic_sidebar( 'sidebar-widget' ); ?>
+			<?php else: ?>
+				<h2>Место для виджета сайдбара</h2>
+			<?php endif; ?>
+		</aside>
+	</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<?php 
+		comments_template();
+		wp_list_comments(); 
+	?>
+</section>
+<?php get_footer(); ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
